@@ -1,0 +1,2329 @@
+[
+    {
+        "id": "d62c39bd69365bea",
+        "type": "inject",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10800",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 1060,
+        "wires": [
+            [
+                "1c30a64bea101457",
+                "408541a1b6463399",
+                "8778fdbb0ac86998",
+                "4c27afb3d2f0d93f",
+                "48ec025156325eed"
+            ]
+        ]
+    },
+    {
+        "id": "1c30a64bea101457",
+        "type": "file in",
+        "z": "fdec1d97771c2aaa",
+        "name": "battery1",
+        "filename": "C:\\Users\\Jeong\\OneDrive - UTS\\UTS 2021S\\IOT\\data\\battery5.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "5d7f245a44eca862"
+            ]
+        ]
+    },
+    {
+        "id": "da7c94ed93d72da1",
+        "type": "csv",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 780,
+        "y": 220,
+        "wires": [
+            [
+                "8c52b73d0225ca54",
+                "2d5ff4c86e9f3187",
+                "bd7e3993b25cbb31",
+                "9a9c9c38edfcf002",
+                "fa0f34b20bb4608b",
+                "01c122232faf52e2",
+                "1182991af2ab8df2",
+                "37ecf8f09c3e241f",
+                "67dd8cf16d8efc84",
+                "0e2b259c49ccb7fd"
+            ]
+        ]
+    },
+    {
+        "id": "408541a1b6463399",
+        "type": "file in",
+        "z": "fdec1d97771c2aaa",
+        "name": "battery2",
+        "filename": "C:\\Users\\Jeong\\OneDrive - UTS\\UTS 2021S\\IOT\\data\\battery10.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "3fb6b7f2bf299b10"
+            ]
+        ]
+    },
+    {
+        "id": "8778fdbb0ac86998",
+        "type": "file in",
+        "z": "fdec1d97771c2aaa",
+        "name": "battery3",
+        "filename": "C:\\Users\\Jeong\\OneDrive - UTS\\UTS 2021S\\IOT\\data\\battery15.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 1060,
+        "wires": [
+            [
+                "60a4a6b74f594992"
+            ]
+        ]
+    },
+    {
+        "id": "4c27afb3d2f0d93f",
+        "type": "file in",
+        "z": "fdec1d97771c2aaa",
+        "name": "battery4",
+        "filename": "C:\\Users\\Jeong\\OneDrive - UTS\\UTS 2021S\\IOT\\data\\battery20.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 1500,
+        "wires": [
+            [
+                "23f223b0b1f9fc4b"
+            ]
+        ]
+    },
+    {
+        "id": "48ec025156325eed",
+        "type": "file in",
+        "z": "fdec1d97771c2aaa",
+        "name": "battery5",
+        "filename": "C:\\Users\\Jeong\\OneDrive - UTS\\UTS 2021S\\IOT\\data\\battery25.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 480,
+        "y": 1940,
+        "wires": [
+            [
+                "3d3377e06016e22a"
+            ]
+        ]
+    },
+    {
+        "id": "5d7f245a44eca862",
+        "type": "delay",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "da7c94ed93d72da1"
+            ]
+        ]
+    },
+    {
+        "id": "3fb6b7f2bf299b10",
+        "type": "delay",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 620,
+        "y": 600,
+        "wires": [
+            [
+                "541bf754e47e6f9f"
+            ]
+        ]
+    },
+    {
+        "id": "60a4a6b74f594992",
+        "type": "delay",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 620,
+        "y": 1060,
+        "wires": [
+            [
+                "440203c004b11b81"
+            ]
+        ]
+    },
+    {
+        "id": "23f223b0b1f9fc4b",
+        "type": "delay",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 620,
+        "y": 1500,
+        "wires": [
+            [
+                "8e106269987bc5ad"
+            ]
+        ]
+    },
+    {
+        "id": "3d3377e06016e22a",
+        "type": "delay",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 640,
+        "y": 1940,
+        "wires": [
+            [
+                "57b6730aedadc9d4"
+            ]
+        ]
+    },
+    {
+        "id": "541bf754e47e6f9f",
+        "type": "csv",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_2",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 780,
+        "y": 600,
+        "wires": [
+            [
+                "9497becbd0014045",
+                "3aa8eadfc032ada4",
+                "384c23e31cf71856",
+                "ef8e173c2f7e9773",
+                "c3768a655435f5e8",
+                "72aa69fb5173a91a",
+                "d66a148e0dbe3fd9",
+                "01040281fd28bb9b",
+                "187111ba7e2db878",
+                "20e45748b526c68f"
+            ]
+        ]
+    },
+    {
+        "id": "440203c004b11b81",
+        "type": "csv",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_3",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 780,
+        "y": 1060,
+        "wires": [
+            [
+                "ab9e52bd73f6ac25",
+                "da3219b97f802bbd",
+                "fead18359ec22e21",
+                "d3ee31750a4e9c78",
+                "4735caaddd67b1ca",
+                "58ac3e0ba8fcca6a",
+                "b9017fa46ad9876e",
+                "976df76c61c55730",
+                "578ecb19c0d4ae12",
+                "d8efc3013ff426b8"
+            ]
+        ]
+    },
+    {
+        "id": "8e106269987bc5ad",
+        "type": "csv",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_4",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 780,
+        "y": 1500,
+        "wires": [
+            [
+                "28b36c4ef51eb508",
+                "a9dad8504eeed0f5",
+                "ad55499ff2fdb0cb",
+                "ffa4d3958bd29433",
+                "d4f77a8bfbf7b917",
+                "2a3fea049141213b",
+                "aeab025d9ed3500c",
+                "8651d6325476df53",
+                "279514225864fc95",
+                "582511e82904fc18"
+            ]
+        ]
+    },
+    {
+        "id": "57b6730aedadc9d4",
+        "type": "csv",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_5",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 800,
+        "y": 1940,
+        "wires": [
+            [
+                "dc1604b6557f80d4",
+                "894758dfa0b40597",
+                "52641a967efc343f",
+                "b209113782336cd0",
+                "b6314317462cf8d4",
+                "ec5ecec0c5042d02",
+                "e49b11e6d6a1a089",
+                "82967e2d5fb6bf27",
+                "7e3eb85a0417c72a",
+                "1565e83e253e3ea4"
+            ]
+        ]
+    },
+    {
+        "id": "51fb031b6fa7fd0f",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_1: Current",
+        "group": "f0d2deddd1f64871",
+        "order": 1,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_1: Current & Temperature",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1380,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c52b73d0225ca54",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Current",
+        "func": "msg.payload = msg.payload[\"Current\"];\nmsg.topic = \"Current\";\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 160,
+        "wires": [
+            [
+                "51fb031b6fa7fd0f"
+            ]
+        ]
+    },
+    {
+        "id": "1182991af2ab8df2",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Average_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Average_Cell_Vol\"];\nmsg.topic = \"Average Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 240,
+        "wires": [
+            [
+                "e26127e760ae63b2"
+            ]
+        ]
+    },
+    {
+        "id": "2d5ff4c86e9f3187",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: MOS_temp",
+        "func": "msg.payload = msg.payload[\"MOS_temp\"];\nmsg.topic = \"MOS temp\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 200,
+        "wires": [
+            [
+                "51fb031b6fa7fd0f"
+            ]
+        ]
+    },
+    {
+        "id": "bd7e3993b25cbb31",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Max_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Max_Cell_Vol\"];\nmsg.topic = \"Max Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 280,
+        "wires": [
+            [
+                "e26127e760ae63b2"
+            ]
+        ]
+    },
+    {
+        "id": "9a9c9c38edfcf002",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Min_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Min_Cell_Vol\"];\nmsg.topic = \"Min Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 320,
+        "wires": [
+            [
+                "e26127e760ae63b2"
+            ]
+        ]
+    },
+    {
+        "id": "fa0f34b20bb4608b",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Discharge_Capacity",
+        "func": "msg.payload = msg.payload[\"Discharge_Capacity\"];\nmsg.topic = \"Discharge Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 360,
+        "wires": [
+            [
+                "8b55260a891e2d63"
+            ]
+        ]
+    },
+    {
+        "id": "01c122232faf52e2",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1: Charging_Capacity",
+        "func": "msg.payload = msg.payload[\"Charging_Capacity\"];\nmsg.topic = \"Charging Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 400,
+        "wires": [
+            [
+                "8b55260a891e2d63"
+            ]
+        ]
+    },
+    {
+        "id": "e26127e760ae63b2",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_1: Cell Vol",
+        "group": "49eb2f6ee217989a",
+        "order": 1,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_1: Cell Vol",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b55260a891e2d63",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_1: Capacity",
+        "group": "07642072c88a5e52",
+        "order": 1,
+        "width": 18,
+        "height": 8,
+        "label": "Solar_1: Capacity",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c6c5298dd00b9e6",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Current",
+        "group": "f0d2deddd1f64871",
+        "order": 2,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_2: Current & Temperature",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1380,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9497becbd0014045",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Current",
+        "func": "msg.payload = msg.payload[\"Current\"];\nmsg.topic = \"Current\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 600,
+        "wires": [
+            [
+                "3c6c5298dd00b9e6"
+            ]
+        ]
+    },
+    {
+        "id": "384c23e31cf71856",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Average_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Average_Cell_Vol\"];\nmsg.topic = \"Average Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 680,
+        "wires": [
+            [
+                "aadc9e54b3610498"
+            ]
+        ]
+    },
+    {
+        "id": "3aa8eadfc032ada4",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: MOS_temp",
+        "func": "msg.payload = msg.payload[\"MOS_temp\"];\nmsg.topic = \"MOS temp\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 640,
+        "wires": [
+            [
+                "3c6c5298dd00b9e6"
+            ]
+        ]
+    },
+    {
+        "id": "ef8e173c2f7e9773",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Max_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Max_Cell_Vol\"];\nmsg.topic = \"Max Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 720,
+        "wires": [
+            [
+                "aadc9e54b3610498"
+            ]
+        ]
+    },
+    {
+        "id": "c3768a655435f5e8",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Min_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Min_Cell_Vol\"];\nmsg.topic = \"Min Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 760,
+        "wires": [
+            [
+                "aadc9e54b3610498"
+            ]
+        ]
+    },
+    {
+        "id": "72aa69fb5173a91a",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Discharge_Capacity",
+        "func": "msg.payload = msg.payload[\"Discharge_Capacity\"];\nmsg.topic = \"Discharge Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 800,
+        "wires": [
+            [
+                "51eeb6ca216bea04"
+            ]
+        ]
+    },
+    {
+        "id": "d66a148e0dbe3fd9",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Charging_Capacity",
+        "func": "msg.payload = msg.payload[\"Charging_Capacity\"];\nmsg.topic = \"Charging Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 840,
+        "wires": [
+            [
+                "51eeb6ca216bea04"
+            ]
+        ]
+    },
+    {
+        "id": "aadc9e54b3610498",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Cell Vol",
+        "group": "49eb2f6ee217989a",
+        "order": 2,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_2: Cell Vol",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51eeb6ca216bea04",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2: Capacity",
+        "group": "07642072c88a5e52",
+        "order": 2,
+        "width": 18,
+        "height": 8,
+        "label": "Solar_2: Capacity",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "138b6b090b331b60",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Current",
+        "group": "f0d2deddd1f64871",
+        "order": 3,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_3: Current & Temperature",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1380,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab9e52bd73f6ac25",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Current",
+        "func": "msg.payload = msg.payload[\"Current\"];\nmsg.topic = \"Current\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1060,
+        "wires": [
+            [
+                "138b6b090b331b60"
+            ]
+        ]
+    },
+    {
+        "id": "fead18359ec22e21",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Average_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Average_Cell_Vol\"];\nmsg.topic = \"Average Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1140,
+        "wires": [
+            [
+                "03523edaaa103284"
+            ]
+        ]
+    },
+    {
+        "id": "da3219b97f802bbd",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: MOS_temp",
+        "func": "msg.payload = msg.payload[\"MOS_temp\"];\nmsg.topic = \"MOS temp\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1100,
+        "wires": [
+            [
+                "138b6b090b331b60"
+            ]
+        ]
+    },
+    {
+        "id": "d3ee31750a4e9c78",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Max_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Max_Cell_Vol\"];\nmsg.topic = \"Max Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1180,
+        "wires": [
+            [
+                "03523edaaa103284"
+            ]
+        ]
+    },
+    {
+        "id": "4735caaddd67b1ca",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Min_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Min_Cell_Vol\"];\nmsg.topic = \"Min Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1220,
+        "wires": [
+            [
+                "03523edaaa103284"
+            ]
+        ]
+    },
+    {
+        "id": "58ac3e0ba8fcca6a",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Discharge_Capacity",
+        "func": "msg.payload = msg.payload[\"Discharge_Capacity\"];\nmsg.topic = \"Discharge Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1260,
+        "wires": [
+            [
+                "a5bf9236f3b543f7"
+            ]
+        ]
+    },
+    {
+        "id": "b9017fa46ad9876e",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Charging_Capacity",
+        "func": "msg.payload = msg.payload[\"Charging_Capacity\"];\nmsg.topic = \"Charging Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1300,
+        "wires": [
+            [
+                "a5bf9236f3b543f7"
+            ]
+        ]
+    },
+    {
+        "id": "03523edaaa103284",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Cell Vol",
+        "group": "49eb2f6ee217989a",
+        "order": 3,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_3: Cell Vol",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5bf9236f3b543f7",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3: Capacity",
+        "group": "07642072c88a5e52",
+        "order": 3,
+        "width": 18,
+        "height": 8,
+        "label": "Solar_3: Capacity",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec6d6945cc179a62",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Current",
+        "group": "f0d2deddd1f64871",
+        "order": 4,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_4: Current & Temperature",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1380,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28b36c4ef51eb508",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Current",
+        "func": "msg.payload = msg.payload[\"Current\"];\nmsg.topic = \"Current\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1500,
+        "wires": [
+            [
+                "ec6d6945cc179a62"
+            ]
+        ]
+    },
+    {
+        "id": "ad55499ff2fdb0cb",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Average_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Average_Cell_Vol\"];\nmsg.topic = \"Average Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1580,
+        "wires": [
+            [
+                "8c59c85000659d01"
+            ]
+        ]
+    },
+    {
+        "id": "a9dad8504eeed0f5",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: MOS_temp",
+        "func": "msg.payload = msg.payload[\"MOS_temp\"];\nmsg.topic = \"MOS temp\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1540,
+        "wires": [
+            [
+                "ec6d6945cc179a62"
+            ]
+        ]
+    },
+    {
+        "id": "ffa4d3958bd29433",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Max_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Max_Cell_Vol\"];\nmsg.topic = \"Max Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1620,
+        "wires": [
+            [
+                "8c59c85000659d01"
+            ]
+        ]
+    },
+    {
+        "id": "d4f77a8bfbf7b917",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Min_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Min_Cell_Vol\"];\nmsg.topic = \"Min Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1660,
+        "wires": [
+            [
+                "8c59c85000659d01"
+            ]
+        ]
+    },
+    {
+        "id": "2a3fea049141213b",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Discharge_Capacity",
+        "func": "msg.payload = msg.payload[\"Discharge_Capacity\"];\nmsg.topic = \"Discharge Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1700,
+        "wires": [
+            [
+                "54441b7eb71122f0"
+            ]
+        ]
+    },
+    {
+        "id": "aeab025d9ed3500c",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Charging_Capacity",
+        "func": "msg.payload = msg.payload[\"Charging_Capacity\"];\nmsg.topic = \"Charging Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1740,
+        "wires": [
+            [
+                "54441b7eb71122f0"
+            ]
+        ]
+    },
+    {
+        "id": "8c59c85000659d01",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Cell Vol",
+        "group": "49eb2f6ee217989a",
+        "order": 4,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_4: Cell Vol",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54441b7eb71122f0",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4: Capacity",
+        "group": "07642072c88a5e52",
+        "order": 4,
+        "width": 18,
+        "height": 8,
+        "label": "Solar_4: Capacity",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d58de0ed15f6255f",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Current",
+        "group": "f0d2deddd1f64871",
+        "order": 5,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_5: Current & Temperature",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1380,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc1604b6557f80d4",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Current",
+        "func": "msg.payload = msg.payload[\"Current\"];\nmsg.topic = \"Current\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1940,
+        "wires": [
+            [
+                "d58de0ed15f6255f"
+            ]
+        ]
+    },
+    {
+        "id": "52641a967efc343f",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Average_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Average_Cell_Vol\"];\nmsg.topic = \"Average Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2020,
+        "wires": [
+            [
+                "1ebdc2b1e5ef1a02"
+            ]
+        ]
+    },
+    {
+        "id": "894758dfa0b40597",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: MOS_temp",
+        "func": "msg.payload = msg.payload[\"MOS_temp\"];\nmsg.topic = \"MOS temp\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1980,
+        "wires": [
+            [
+                "d58de0ed15f6255f"
+            ]
+        ]
+    },
+    {
+        "id": "b209113782336cd0",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Max_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Max_Cell_Vol\"];\nmsg.topic = \"Max Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2060,
+        "wires": [
+            [
+                "1ebdc2b1e5ef1a02"
+            ]
+        ]
+    },
+    {
+        "id": "b6314317462cf8d4",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Min_Cell_Vol",
+        "func": "msg.payload = msg.payload[\"Min_Cell_Vol\"];\nmsg.topic = \"Min Cell Vol\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2100,
+        "wires": [
+            [
+                "1ebdc2b1e5ef1a02"
+            ]
+        ]
+    },
+    {
+        "id": "ec5ecec0c5042d02",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Discharge_Capacity",
+        "func": "msg.payload = msg.payload[\"Discharge_Capacity\"];\nmsg.topic = \"Discharge Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2140,
+        "wires": [
+            [
+                "b9a5ee08eb9e2e7d"
+            ]
+        ]
+    },
+    {
+        "id": "e49b11e6d6a1a089",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Charging_Capacity",
+        "func": "msg.payload = msg.payload[\"Charging_Capacity\"];\nmsg.topic = \"Charging Capacity\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2180,
+        "wires": [
+            [
+                "b9a5ee08eb9e2e7d"
+            ]
+        ]
+    },
+    {
+        "id": "1ebdc2b1e5ef1a02",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Cell Vol",
+        "group": "49eb2f6ee217989a",
+        "order": 5,
+        "width": 20,
+        "height": 10,
+        "label": "Solar_5: Cell Vol",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9a5ee08eb9e2e7d",
+        "type": "ui_chart",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5: Capacity",
+        "group": "07642072c88a5e52",
+        "order": 5,
+        "width": 18,
+        "height": 8,
+        "label": "Solar_5: Capacity",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1390,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67dd8cf16d8efc84",
+        "type": "influxdb out",
+        "z": "fdec1d97771c2aaa",
+        "influxdb": "f41c00fbd38a08b9",
+        "name": "solar_db_1",
+        "measurement": "solar_1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "solar_proj",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "187111ba7e2db878",
+        "type": "influxdb out",
+        "z": "fdec1d97771c2aaa",
+        "influxdb": "f41c00fbd38a08b9",
+        "name": "solar_db_2",
+        "measurement": "solar_2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "solar_proj",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "578ecb19c0d4ae12",
+        "type": "influxdb out",
+        "z": "fdec1d97771c2aaa",
+        "influxdb": "f41c00fbd38a08b9",
+        "name": "solar_db_3",
+        "measurement": "solar_3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "solar_proj",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "279514225864fc95",
+        "type": "influxdb out",
+        "z": "fdec1d97771c2aaa",
+        "influxdb": "f41c00fbd38a08b9",
+        "name": "solar_db_4",
+        "measurement": "solar_4",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "solar_proj",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "7e3eb85a0417c72a",
+        "type": "influxdb out",
+        "z": "fdec1d97771c2aaa",
+        "influxdb": "f41c00fbd38a08b9",
+        "name": "solar_db_5",
+        "measurement": "solar_5",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "solar_proj",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "01040281fd28bb9b",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_2_db",
+        "func": "var status = false;\n\nmsg.payload[\"alert\"] = {\n    \"Max_Cell_Vol\": 0,\n    \"Min_Cell_Vol\": 0,\n    \"Area_Temp_1\": 0,\n    \"Area_Temp_2\": 0,\n    \"Area_Temp_3\": 0,\n    \"Area_Temp_4\": 0\n};\n\n//if max voltage > 5000mV\nif(msg.payload[\"Max_Cell_Vol\"] > 5000)\n{\n    // max voltage send alert\n    msg.payload[\"alert\"][\"Max_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if min voltage < 2500mV\nif(msg.payload[\"Min_Cell_Vol\"] < 2500)\n{\n    // min voltage send alert\n    msg.payload[\"alert\"][\"Min_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_1\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_1\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_2\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_2\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_3\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_3\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_4\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_4\"] = 1;\n    status = true;\n}\n\nif (status == true)\n{\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            [
+                "a76cf2feebcdb5b9"
+            ]
+        ]
+    },
+    {
+        "id": "976df76c61c55730",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_3_db",
+        "func": "var status = false;\n\nmsg.payload[\"alert\"] = {\n    \"Max_Cell_Vol\": 0,\n    \"Min_Cell_Vol\": 0,\n    \"Area_Temp_1\": 0,\n    \"Area_Temp_2\": 0,\n    \"Area_Temp_3\": 0,\n    \"Area_Temp_4\": 0\n};\n\n//if max voltage > 5000mV\nif(msg.payload[\"Max_Cell_Vol\"] > 5000)\n{\n    // max voltage send alert\n    msg.payload[\"alert\"][\"Max_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if min voltage < 2500mV\nif(msg.payload[\"Min_Cell_Vol\"] < 2500)\n{\n    // min voltage send alert\n    msg.payload[\"alert\"][\"Min_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_1\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_1\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_2\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_2\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_3\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_3\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_4\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_4\"] = 1;\n    status = true;\n}\n\nif (status == true)\n{\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1020,
+        "wires": [
+            [
+                "8d870d916a0a528a"
+            ]
+        ]
+    },
+    {
+        "id": "8651d6325476df53",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_4_db",
+        "func": "var status = false;\n\nmsg.payload[\"alert\"] = {\n    \"Max_Cell_Vol\": 0,\n    \"Min_Cell_Vol\": 0,\n    \"Area_Temp_1\": 0,\n    \"Area_Temp_2\": 0,\n    \"Area_Temp_3\": 0,\n    \"Area_Temp_4\": 0\n};\n\n//if max voltage > 5000mV\nif(msg.payload[\"Max_Cell_Vol\"] > 5000)\n{\n    // max voltage send alert\n    msg.payload[\"alert\"][\"Max_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if min voltage < 2500mV\nif(msg.payload[\"Min_Cell_Vol\"] < 2500)\n{\n    // min voltage send alert\n    msg.payload[\"alert\"][\"Min_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_1\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_1\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_2\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_2\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_3\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_3\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_4\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_4\"] = 1;\n    status = true;\n}\n\nif (status == true)\n{\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1460,
+        "wires": [
+            [
+                "e063228ea93abbc1"
+            ]
+        ]
+    },
+    {
+        "id": "82967e2d5fb6bf27",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_5_db",
+        "func": "var status = false;\n\nmsg.payload[\"alert\"] = {\n    \"Max_Cell_Vol\": 0,\n    \"Min_Cell_Vol\": 0,\n    \"Area_Temp_1\": 0,\n    \"Area_Temp_2\": 0,\n    \"Area_Temp_3\": 0,\n    \"Area_Temp_4\": 0\n};\n\n//if max voltage > 5000mV\nif(msg.payload[\"Max_Cell_Vol\"] > 5000)\n{\n    // max voltage send alert\n    msg.payload[\"alert\"][\"Max_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if min voltage < 2500mV\nif(msg.payload[\"Min_Cell_Vol\"] < 2500)\n{\n    // min voltage send alert\n    msg.payload[\"alert\"][\"Min_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_1\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_1\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_2\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_2\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_3\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_3\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_4\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_4\"] = 1;\n    status = true;\n}\n\nif (status == true)\n{\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1900,
+        "wires": [
+            [
+                "0eda92c63d0909a2"
+            ]
+        ]
+    },
+    {
+        "id": "62facc7ce7b5b392",
+        "type": "ui_toast",
+        "z": "fdec1d97771c2aaa",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "ALERT",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1590,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b4c4a08294ab8a1",
+        "type": "ui_text_input",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_1_Alert",
+        "label": "Alert",
+        "tooltip": "",
+        "group": "4c6301bedde6f43c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "payload[\"alert\"]",
+        "topicType": "msg",
+        "x": 1380,
+        "y": 120,
+        "wires": [
+            [
+                "62facc7ce7b5b392"
+            ]
+        ]
+    },
+    {
+        "id": "37ecf8f09c3e241f",
+        "type": "function",
+        "z": "fdec1d97771c2aaa",
+        "name": "solar_1_db",
+        "func": "var status = false;\n\nmsg.payload[\"alert\"] = {\n    \"Max_Cell_Vol\": 0,\n    \"Min_Cell_Vol\": 0,\n    \"Area_Temp_1\": 0,\n    \"Area_Temp_2\": 0,\n    \"Area_Temp_3\": 0,\n    \"Area_Temp_4\": 0\n};\n\n//if max voltage > 5000mV\nif(msg.payload[\"Max_Cell_Vol\"] > 5000)\n{\n    // max voltage send alert\n    msg.payload[\"alert\"][\"Max_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if min voltage < 2500mV\nif(msg.payload[\"Min_Cell_Vol\"] < 2500)\n{\n    // min voltage send alert\n    msg.payload[\"alert\"][\"Min_Cell_Vol\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_1\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_1\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_2\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_2\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_3\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_3\"] = 1;\n    status = true;\n}\n\n//if temperature > 40\nif(msg.payload[\"Area_Temp_4\"] > 40.0)\n{\n    // temperature alert\n    msg.payload[\"alert\"][\"Area_Temp_4\"] = 1;\n    status = true;\n}\n\nif (status == true)\n{\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 120,
+        "wires": [
+            [
+                "5b4c4a08294ab8a1"
+            ]
+        ]
+    },
+    {
+        "id": "b42615c8db029c2f",
+        "type": "ui_toast",
+        "z": "fdec1d97771c2aaa",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1590,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a76cf2feebcdb5b9",
+        "type": "ui_text_input",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_2_Alert",
+        "label": "Alert",
+        "tooltip": "",
+        "group": "4c6301bedde6f43c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "payload[\"alert\"]",
+        "topicType": "msg",
+        "x": 1380,
+        "y": 560,
+        "wires": [
+            [
+                "b42615c8db029c2f"
+            ]
+        ]
+    },
+    {
+        "id": "0ce30d099b203935",
+        "type": "ui_toast",
+        "z": "fdec1d97771c2aaa",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1590,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d870d916a0a528a",
+        "type": "ui_text_input",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_3_Alert",
+        "label": "Alert",
+        "tooltip": "",
+        "group": "4c6301bedde6f43c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "payload[\"alert\"]",
+        "topicType": "msg",
+        "x": 1380,
+        "y": 1020,
+        "wires": [
+            [
+                "0ce30d099b203935"
+            ]
+        ]
+    },
+    {
+        "id": "9e4022f4d053f940",
+        "type": "ui_toast",
+        "z": "fdec1d97771c2aaa",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1590,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e063228ea93abbc1",
+        "type": "ui_text_input",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_4_Alert",
+        "label": "Alert",
+        "tooltip": "",
+        "group": "4c6301bedde6f43c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "payload[\"alert\"]",
+        "topicType": "msg",
+        "x": 1380,
+        "y": 1460,
+        "wires": [
+            [
+                "9e4022f4d053f940"
+            ]
+        ]
+    },
+    {
+        "id": "74408412686ba600",
+        "type": "ui_toast",
+        "z": "fdec1d97771c2aaa",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1590,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0eda92c63d0909a2",
+        "type": "ui_text_input",
+        "z": "fdec1d97771c2aaa",
+        "name": "Solar_5_Alert",
+        "label": "Alert",
+        "tooltip": "",
+        "group": "4c6301bedde6f43c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "payload[\"alert\"]",
+        "topicType": "msg",
+        "x": 1380,
+        "y": 1900,
+        "wires": [
+            [
+                "74408412686ba600"
+            ]
+        ]
+    },
+    {
+        "id": "0e2b259c49ccb7fd",
+        "type": "mqtt out",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "topic": "Solar_Project_1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5c7ca315f3f7674",
+        "x": 1100,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "20e45748b526c68f",
+        "type": "mqtt out",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "topic": "Solar_Project_2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5c7ca315f3f7674",
+        "x": 1100,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d8efc3013ff426b8",
+        "type": "mqtt out",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "topic": "Solar_Project_3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5c7ca315f3f7674",
+        "x": 1100,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "582511e82904fc18",
+        "type": "mqtt out",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "topic": "Solar_Project_4",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5c7ca315f3f7674",
+        "x": 1100,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "1565e83e253e3ea4",
+        "type": "mqtt out",
+        "z": "fdec1d97771c2aaa",
+        "name": "",
+        "topic": "Solar_Project_5",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5c7ca315f3f7674",
+        "x": 1100,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "f0d2deddd1f64871",
+        "type": "ui_group",
+        "name": "Current",
+        "tab": "a758fcb472d462aa",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": true
+    },
+    {
+        "id": "49eb2f6ee217989a",
+        "type": "ui_group",
+        "name": "Voltage",
+        "tab": "1b6670a6b4d2fa79",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": true
+    },
+    {
+        "id": "07642072c88a5e52",
+        "type": "ui_group",
+        "name": "Capacity",
+        "tab": "c679372ffec90754",
+        "order": 1,
+        "disp": true,
+        "width": 18,
+        "collapse": true
+    },
+    {
+        "id": "f41c00fbd38a08b9",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "solar_db",
+        "name": "solar_db",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.8-flux",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "4c6301bedde6f43c",
+        "type": "ui_group",
+        "name": "Alert",
+        "tab": "053ec1ba79b5b66f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d5c7ca315f3f7674",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "27.32.121.250",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a758fcb472d462aa",
+        "type": "ui_tab",
+        "name": "Current",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1b6670a6b4d2fa79",
+        "type": "ui_tab",
+        "name": "Voltage",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c679372ffec90754",
+        "type": "ui_tab",
+        "name": "Capacity",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "053ec1ba79b5b66f",
+        "type": "ui_tab",
+        "name": "Alert",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
